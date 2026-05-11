@@ -340,6 +340,9 @@ const app = {
         const maxScore = this.questions.length * 5;
         const percentage = (totalScore / maxScore) * 100;
         
+        // 找到对应等级
+        const level = this.levels.find(l => percentage >= (l.min / 90 * 100) && percentage <= (l.max / 90 * 100)) || this.levels[0];
+        
         // 稀缺感：基于rarity生成"全国仅X%"
         const rarityText = `全国仅${level.rarity}%的人是这种物种`;
         const beatText = `你击败了${Math.min(99, Math.round(percentage))}%的测试者`;
