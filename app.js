@@ -220,40 +220,48 @@ const app = {
     ],
 
     levels: [
-        { min: 0, max: 30, emoji: "👶", title: "社交婴儿", desc: "你还处在社交的襁褓期，连基本的社交规则都不太懂。建议：多观察身边高情商的人是怎么说话的，少说话多微笑。" },
-        { min: 31, max: 45, emoji: "🎒", title: "愣头青", desc: "有热情但缺技巧，直肠子，经常好心办坏事。建议：学会委婉表达和换位思考，耿直不是借口。" },
-        { min: 46, max: 55, emoji: "🤖", title: "规则复读机", desc: "开始懂规则了，但只会死记硬背，灵活运用为零。建议：停止死记硬背，开始理解每个规则背后的逻辑。" },
-        { min: 56, max: 65, emoji: "😐", title: "普通社畜", desc: "你的社交能力及格了，能应付日常场景，但缺乏亮点。建议：培养一两个擅长的社交场景，建立自信。" },
-        { min: 66, max: 75, emoji: "😎", title: "场面人", desc: "能hold住大多数社交场合，左右逢源，但偶尔还会翻车。建议：培养读空气的敏锐度，学会预判他人反应。" },
-        { min: 76, max: 85, emoji: "🦊", title: "人精", desc: "社交高手，游刃有余，几乎从不踩雷，但偶尔让人觉得太会了。建议：在技巧之上加入真诚，避免油腻感。" },
-        { min: 86, max: 90, emoji: "🧙", title: "老油条", desc: "返璞归真，大智若愚。看似随意，实则每一步都算好了。终极境界：社交于无形，让人如沐春风而不自知。" }
+        { min: 0, max: 30, emoji: "🧟", title: "究极社恐·见光死", rarity: 3, desc: "你的社交能量值为负，出门见到活人就想遁地。建议：别勉强自己，互联网才是你的家。", tagline: "生人勿近，熟人更是" },
+        { min: 31, max: 45, emoji: "🤖", title: "职场丧尸·只会嗯嗯", rarity: 8, desc: "你已经掌握了职场生存的基础技能：嗯嗯、好的、收到。但除此之外，你的大脑基本处于待机状态。", tagline: "活着，但只剩本能" },
+        { min: 46, max: 55, emoji: "🐒", title: "吗喽·复制粘贴型人格", rarity: 15, desc: "你像只吗喽，别人做什么你学什么，社交话术全靠复制粘贴。没有原创能力，但模仿得挺像。", tagline: "没有感情，全是技巧" },
+        { min: 56, max: 65, emoji: "✨", title: "精致穷·表面光鲜型", rarity: 22, desc: "你看起来人模人样，实际上社交账户余额不足。能应付场面，但内心每天都在想'这局什么时候结束'。", tagline: "表面风光，内心慌张" },
+        { min: 66, max: 75, emoji: "🔥", title: "社交悍匪·见人说人话", rarity: 28, desc: "你是社交场上的悍匪，见人说人话见鬼说鬼话。偶尔翻车，但总体战绩辉煌。", tagline: "没有我聊不死的天" },
+        { min: 76, max: 85, emoji: "🦊", title: "老狐狸·CPU大师", rarity: 18, desc: "你已经进化成社交食物链顶端，能CPU别人还不留痕迹。但小心，太会了容易没朋友。", tagline: "我在第五层，你在地下室" },
+        { min: 86, max: 90, emoji: "🧙", title: "社交仙人·已臻化境", rarity: 6, desc: "返璞归真，大智若愚。看似随意，实则每一步都算好了。终极境界：让人如沐春风，还觉得你是个老实人。", tagline: "无招胜有招，无形最致命" }
     ],
+
+    dimensionNames: {
+        emotion: { name: "破防指数", icon: "💔" },
+        social: { name: "装熟能力", icon: "🤝" },
+        rules: { name: "摸鱼智商", icon: "🧠" },
+        self: { name: "自知之明", icon: "🪞" },
+        context: { name: "读空气能力", icon: "🌪️" }
+    },
 
     tips: {
         emotion: [
-            "情绪上头时，先深呼吸数10秒再回应",
-            "学会识别自己的情绪触发点",
-            "写日记记录情绪变化规律"
+            "破防的时候先数10秒，别当场发作",
+            "找到自己的'情绪开关'，提前避雷",
+            "写日记不是为了复盘，是为了骂完人爽一下"
         ],
         social: [
-            "每周主动发起一次社交邀约",
-            "记住新朋友的名字和喜好",
-            "练习3分钟电梯演讲自我介绍"
+            "每周主动约一次人，练胆",
+            "记住别人名字，这是最低成本的装熟",
+            "电梯里遇到CEO，微笑点头就够了，别编200万方案"
         ],
         rules: [
-            "观察不同场合的潜规则",
-            "学会读懂空气，看场合说话",
-            "了解你所在行业的社交礼仪"
+            "潜规则不是规则，但不懂会死",
+            "学会'读懂空气'，比读懂文件重要",
+            "每个行业的社交礼仪都不一样，别跨行硬套"
         ],
         self: [
-            "定期做自我反思，了解自己的优缺点",
-            "接受不完美，不必讨好所有人",
-            "建立个人边界，学会说不"
+            "承认自己不行，比硬撑舒服多了",
+            "不必讨好所有人，你又不是人民币",
+            "建立边界，学会说'不'——先从拒绝加班开始"
         ],
         context: [
-            "说话前观察对方的情绪状态",
-            "根据关系亲疏调整说话方式",
-            "培养察言观色的敏感度"
+            "说话前先看对方脸色，别自说自话",
+            "关系远近决定说话方式，别对谁都掏心掏肺",
+            "察言观色是本能，练多了就成精了"
         ]
     },
 
@@ -332,20 +340,29 @@ const app = {
         const maxScore = this.questions.length * 5;
         const percentage = (totalScore / maxScore) * 100;
         
-        // 找到对应等级
-        const level = this.levels.find(l => percentage >= (l.min / 90 * 100) && percentage <= (l.max / 90 * 100)) || this.levels[0];
+        // 稀缺感：基于rarity生成"全国仅X%"
+        const rarityText = `全国仅${level.rarity}%的人是这种物种`;
+        const beatText = `你击败了${Math.min(99, Math.round(percentage))}%的测试者`;
         
         document.getElementById('result-level').textContent = level.emoji;
         document.getElementById('result-title').textContent = level.title;
         document.getElementById('result-desc').textContent = level.desc;
         
-        // 维度得分
+        // 新增tagline、rarity、beat显示
+        const taglineEl = document.getElementById('result-tagline');
+        const rarityEl = document.getElementById('result-rarity');
+        const beatEl = document.getElementById('result-beat');
+        if (taglineEl) taglineEl.textContent = level.tagline;
+        if (rarityEl) rarityEl.textContent = rarityText;
+        if (beatEl) beatEl.textContent = beatText;
+        
+        // 维度得分 - 使用梗化名
         const dimensions = [
-            { id: 'dim-emotion', key: 'emotion', name: '情绪管理' },
-            { id: 'dim-social', key: 'social', name: '社交技巧' },
-            { id: 'dim-rules', key: 'rules', name: '规则理解' },
-            { id: 'dim-self', key: 'self', name: '自我认知' },
-            { id: 'dim-context', key: 'context', name: '情境判断' }
+            { id: 'dim-emotion', key: 'emotion' },
+            { id: 'dim-social', key: 'social' },
+            { id: 'dim-rules', key: 'rules' },
+            { id: 'dim-self', key: 'self' },
+            { id: 'dim-context', key: 'context' }
         ];
         
         dimensions.forEach(dim => {
@@ -353,24 +370,29 @@ const app = {
             const el = document.getElementById(dim.id);
             el.querySelector('.dim-fill').style.width = score + '%';
             el.querySelector('.dim-score').textContent = score;
+            // 更新维度名为梗化名
+            const dimInfo = this.dimensionNames[dim.key];
+            const nameEl = el.querySelector('.dim-name');
+            if (nameEl) nameEl.textContent = `${dimInfo.icon} ${dimInfo.name}`;
         });
         
-        // 升级建议
+        // 升级建议 - 梗化维度名
         const weakestDim = Object.keys(scores).reduce((a, b) => 
             (counts[a] > 0 ? scores[a] / counts[a] : 999) < (counts[b] > 0 ? scores[b] / counts[b] : 999) ? a : b
         );
         
         const tips = this.tips[weakestDim];
+        const dimInfo = this.dimensionNames[weakestDim];
         const tipsHtml = `
-            <h3>升级建议</h3>
+            <h3>💪 ${dimInfo.icon} ${dimInfo.name} 急需充值</h3>
             <ul>
                 ${tips.map(t => `<li>${t}</li>`).join('')}
             </ul>
         `;
         document.getElementById('upgrade-tips').innerHTML = tipsHtml;
         
-        // 分享文案
-        const shareText = `我在「社交力大考验」中获得了「${level.title}」称号！${level.emoji}\n\n测测你的社会化程度：${window.location.href}`;
+        // 攻击性分享文案
+        const shareText = `测完发现自己是个「${level.title}」${level.emoji}\n${level.tagline}\n\n全国仅${level.rarity}%的人跟我一样，你呢？👇\n${window.location.href}`;
         document.getElementById('share-text').textContent = shareText;
         
         this.showPage('result-page');
@@ -380,7 +402,7 @@ const app = {
         const text = document.getElementById('share-text').textContent;
         navigator.clipboard.writeText(text).then(() => {
             const btn = document.querySelector('.btn-copy');
-            btn.textContent = '已复制！';
+            btn.textContent = '已复制！去朋友圈装X吧';
             btn.classList.add('copied');
             setTimeout(() => {
                 btn.textContent = '复制文案';

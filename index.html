@@ -43,6 +43,11 @@
                 <div class="result-level" id="result-level"></div>
                 <h2 class="result-title" id="result-title"></h2>
                 <p class="result-desc" id="result-desc"></p>
+                <p class="result-tagline" id="result-tagline" style="font-style:italic;color:#888;margin:8px 0;"></p>
+                <div class="rarity-badges" style="display:flex;gap:10px;justify-content:center;margin:12px 0;flex-wrap:wrap;">
+                    <span class="badge rarity" id="result-rarity" style="background:#ff6b6b;color:#fff;padding:4px 12px;border-radius:20px;font-size:13px;"></span>
+                    <span class="badge beat" id="result-beat" style="background:#4ecdc4;color:#fff;padding:4px 12px;border-radius:20px;font-size:13px;"></span>
+                </div>
                 
                 <div class="score-breakdown">
                     <h3>维度得分</h3>
@@ -76,9 +81,10 @@
                 <div class="upgrade-tips" id="upgrade-tips"></div>
 
                 <div class="share-section">
-                    <p>分享你的结果：</p>
+                    <p>分享你的物种鉴定结果：</p>
                     <div class="share-text" id="share-text"></div>
                     <button class="btn-copy" onclick="app.copyResult()">复制文案</button>
+                    <p style="margin-top:12px;font-size:13px;color:#888;">太准了？<a href="#" onclick="alert('请手动@你的朋友来测！');return false;" style="color:#ff6b6b;">@三个朋友来测</a></p>
                 </div>
 
                 <button class="btn-restart" onclick="app.restart()">再测一次</button>
